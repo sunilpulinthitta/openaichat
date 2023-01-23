@@ -23,33 +23,135 @@
       <height>471</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="hLytMain">
+    <layout class="QHBoxLayout" name="hLytMain" stretch="80,20">
      <item>
-      <layout class="QVBoxLayout" name="vLytChat" stretch="100,1,10,1">
+      <layout class="QVBoxLayout" name="vLytChat" stretch="100,1,10">
        <item>
         <widget class="QTextEdit" name="txtOutput"/>
        </item>
        <item>
-        <widget class="QLabel" name="lblPrompt">
-         <property name="text">
-          <string>Enter prompt below</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="lblPrompt">
+           <property name="text">
+            <string>Enter prompt below:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QTextEdit" name="txtInput"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnSubmit">
-         <property name="text">
-          <string>Submit</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="hLytSubmit" stretch="100,1">
+         <item>
+          <widget class="QTextEdit" name="txtInput"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="10,1,1,1,5">
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QDial" name="dlFontSize">
+             <property name="minimum">
+              <number>6</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+             <property name="notchesVisible">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblFontSize">
+             <property name="text">
+              <string>Font Size</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkHistory">
+             <property name="text">
+              <string>History</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnSubmit">
+             <property name="text">
+              <string>Submit</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      <widget class="QFrame" name="frameHistory">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>111</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="vLytHistory">
+         <item>
+          <widget class="QTreeWidget" name="treeHistory">
+           <attribute name="headerVisible">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string notr="true">1</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
      </item>
     </layout>
    </widget>
