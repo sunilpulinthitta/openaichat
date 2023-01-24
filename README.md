@@ -1,7 +1,7 @@
 # openaichat
 Open AI chat interface using pyqt. You can enter a wide variety of prompts like language translation, grammar correction, bug fix in code etc as seen on OpenAI website examples.
 
-Check requirements.txt for required libraries. Sign in to OpenAI website to get your API key and replace they key in chat.env file.
+Check requirements.txt for required libraries. Sign in to OpenAI website to get your API key and replace they key in chat.env file or create an enviroment variable OPENAI_API_KEY with it. See line 84 in chat.py
 
 Run by:
 python chat.py
