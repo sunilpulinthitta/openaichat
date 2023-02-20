@@ -122,7 +122,7 @@ class Ui(QMainWindow):
     #endregion History
 
     def wrap_html(self, res):
-        return '<span style="white-space: pre-line; word-wrap: break-word; font-family:'+self.cmbFontFamily.currentText()+'; font-size: '+str(self.font_sz)+'px;">'+res+'</span>'
+        return '<span style="white-space: pre-wrap; word-wrap: break-word; font-family:'+self.cmbFontFamily.currentText()+'; font-size: '+str(self.font_sz)+'px;">'+res+'</span>'
 
     def fontsize_update(self):
         self.font_sz = self.spbFontSize.value()
